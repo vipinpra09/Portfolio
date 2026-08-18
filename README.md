@@ -2,6 +2,10 @@
 
 A personal developer portfolio showcasing my skills, projects, experience, and learning journey in software development.
 
+## Live Portfolio
+
+**Visit my portfolio:** https://vipin-prajapati-portfolio.vercel.app/
+
 ## About Me
 
 Hi, I'm **Vipin Prajapati**, a B.Tech Computer Science & Engineering (AI & ML) student and aspiring software engineer. I am focused on **Java, Spring Boot, backend development, databases, and Data Structures & Algorithms**.
@@ -43,8 +47,8 @@ This repository contains the source code for my personal portfolio website, wher
 
 ## Connect With Me
 
-- **GitHub:** [@vipinpra09](https://github.com/vipinpra09)
-- **LinkedIn:** [Vipin Prajapati](https://www.linkedin.com/in/vipinprajapati7348/)
+- **GitHub:** https://github.com/vipinpra09
+- **LinkedIn:** https://www.linkedin.com/in/vipinprajapati7348/
 
 ## Resume
 
