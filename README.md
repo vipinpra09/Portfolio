@@ -44,7 +44,11 @@ This repository contains the source code for my personal portfolio website, wher
 ## Connect With Me
 
 - **GitHub:** [@vipinpra09](https://github.com/vipinpra09)
-- **LinkedIn:** [Vipin Prajapati](https://www.linkedin.com/)
+- **LinkedIn:** [Vipin Prajapati](https://www.linkedin.com/in/vipinprajapati7348/)
+
+## Resume
+
+You can download my latest resume from the portfolio website.
 
 ## License
 
