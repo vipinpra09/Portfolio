@@ -1,35 +1,10 @@
-name: Update LinkedIn Profile
+name: Disable LinkedIn updater
 
 on:
-  push:
-    branches: [main]
-
-permissions:
-  contents: write
+  workflow_dispatch:
 
 jobs:
-  update-linkedin:
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Update LinkedIn URL
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          p = Path('Vipin_Prajapati_Portfolio/index.html')
-          s = p.read_text(encoding='utf-8')
-          s = s.replace('https://linkedin.com/', 'https://www.linkedin.com/in/vipinprajapati7348/')
-          s = s.replace('https://www.linkedin.com/', 'https://www.linkedin.com/in/vipinprajapati7348/')
-          s = s.replace('https://github.com/vipinpra09\",\n      \"https://leetcode.com/Vipinpra09\"', 'https://github.com/vipinpra09\",\n      \"https://www.linkedin.com/in/vipinprajapati7348/\",\n      \"https://leetcode.com/Vipinpra09\"')
-          p.write_text(s, encoding='utf-8')
-          PY
-
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Vipin_Prajapati_Portfolio/index.html
-          git diff --cached --quiet || git commit -m "fix: update LinkedIn profile link"
-          git push
+      - run: echo "Disabled"
