@@ -95,10 +95,10 @@
   /* ---------- typewriter ---------- */
   const typeTarget = $("#typewriter");
   const roles = [
-    "Aspiring Software Engineer",
-    "Java & Spring Boot Developer",
-    "Backend Enthusiast",
-    "DSA Problem Solver",
+    "Aspiring Machine Learning Engineer",
+    "Java Backend Developer",
+    "AI/ML & Data Experimentation",
+    "Spring Boot Developer",
   ];
 
   if (typeTarget && !prefersReducedMotion) {
