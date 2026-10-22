@@ -1,59 +1,58 @@
-# Portfolio
+# Vipin Prajapati — Portfolio
 
-A personal developer portfolio showcasing my skills, projects, experience, and learning journey in software development.
+Personal portfolio showcasing my learning journey, projects, and technical interests across **Machine Learning / AI** and **Java Backend Development**.
 
 ## Live Portfolio
 
-**Visit my portfolio:** https://vipin-prajapati-portfolio.vercel.app/
+https://vipin-prajapati-portfolio.vercel.app/
 
 ## About Me
 
-Hi, I'm **Vipin Prajapati**, a B.Tech Computer Science & Engineering (AI & ML) student and aspiring software engineer. I am focused on **Java, Spring Boot, backend development, databases, and Data Structures & Algorithms**.
+I'm Vipin Prajapati, a B.Tech Computer Science & Engineering (AI & ML) student at R.K.G.I.T, Uttar Pradesh, expected to graduate in 2029. I'm building foundations in machine learning and data experimentation while continuing to develop Java backend skills.
 
-I enjoy building practical applications, solving programming problems, and continuously improving my software engineering skills.
+My current interests include Python, data analysis, machine learning fundamentals, Java, Spring Boot, REST APIs, databases, and Data Structures & Algorithms. I am a student actively learning these areas, not claiming professional ML engineering experience.
 
-## Tech Stack
+## Technical Areas
 
-- **Languages:** Java, C++, Python, JavaScript
-- **Backend:** Java, Spring Boot, REST APIs, Hibernate
+- **Programming:** Python, Java, C++
+- **Machine Learning & Data:** NumPy, Pandas, scikit-learn and model evaluation concepts (learning)
+- **Backend:** Java, Spring Boot, REST APIs, Hibernate/JPA (learning and practice)
 - **Databases:** PostgreSQL, SQL
 - **Web:** HTML, CSS, JavaScript
 - **Tools:** Git, GitHub, VS Code, IntelliJ IDEA, Postman
-- **DSA:** Arrays, Linked Lists, Stacks, Queues, Trees, Searching, Sorting
+- **Problem Solving:** Data Structures & Algorithms
 
 ## Featured Projects
 
-### StudyCanvas
-An educational platform for students to create, organize, and share study resources.
+### [BunkMeter](https://github.com/vipinpra09/BunkMeter)
+A student attendance planning tool to calculate attendance and visualize how lecture attendance choices can affect the percentage.
 
-### College Complaint Management System
-A college-focused application for submitting, tracking, and managing student complaints.
+### [StudyCanvas](https://github.com/vipinpra09/rkgit-hackwarts-StudyCanvas)
+A student-oriented educational platform project focused on organizing and sharing learning resources.
 
-### RKGIT Campus Navigator
-A campus navigation concept designed to help students find classrooms, labs, offices, and other college facilities.
+### Attendify
+A college mini-project focused on attendance tracking and student attendance information.
 
-## What I'm Currently Learning
+### SmartClass AI — Attendance Concept
+An AI/ML-oriented project exploring facial recognition and computer vision for classroom attendance workflows.
 
-- Advanced Java
-- Spring Boot and REST API development
-- Hibernate and JPA
-- PostgreSQL and database design
+## Current Learning Focus
+
+- Python and data handling with NumPy and Pandas
+- Machine learning fundamentals and model evaluation
+- Java and Spring Boot backend development
+- REST API design and database integration
 - Data Structures & Algorithms
-- Backend architecture and scalable application development
 
-## Portfolio
-
-This repository contains the source code for my personal portfolio website, where you can explore my projects, technical skills, and development journey.
-
-## Connect With Me
+## Connect
 
 - **GitHub:** https://github.com/vipinpra09
 - **LinkedIn:** https://www.linkedin.com/in/vipinprajapati7348/
+- **LeetCode:** https://leetcode.com/Vipinpra09
 
-## Resume
+## Repository Structure
 
-You can download my latest resume from the portfolio website.
+- `Vipin_Prajapati_Portfolio/index.html` — portfolio page
+- `Vipin_Prajapati_Portfolio/css/style.css` — styling and responsive layout
+- `Vipin_Prajapati_Portfolio/js/main.js` — interactions and typewriter animation
 
-## License
-
-This project is open for learning and reference. Please give credit if you reuse significant parts of the project.
