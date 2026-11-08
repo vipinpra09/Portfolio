@@ -1,7 +1,7 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
-import { gsap } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js";
-import { ScrollTrigger } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js";
-import Lenis from "https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.mjs";
+import { gsap } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/+esm";
+import { ScrollTrigger } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger/+esm";
+import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.1.20/+esm";
 
 gsap.registerPlugin(ScrollTrigger);
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -50,7 +50,6 @@ if (canvas && !reduced && window.WebGLRenderingContext) {
 if(!reduced){
   try{const lenis=new Lenis({duration:1.05,smoothWheel:true,wheelMultiplier:.9});lenis.on("scroll",ScrollTrigger.update);gsap.ticker.add(time=>lenis.raf(time*1000));gsap.ticker.lagSmoothing(0);}
   catch(error){console.warn("Smooth scrolling unavailable; native scrolling remains enabled.",error);}
-  gsap.utils.toArray(".reveal").forEach(el=>gsap.fromTo(el,{y:34,autoAlpha:0},{y:0,autoAlpha:1,duration:.85,ease:"power3.out",scrollTrigger:{trigger:el,start:"top 91%",once:true}}));
   gsap.utils.toArray(".section__head").forEach(el=>gsap.fromTo(el,{y:22},{y:0,duration:.8,ease:"power2.out",scrollTrigger:{trigger:el,start:"top 88%",once:true}}));
   if(!touch){
     document.querySelectorAll(".project-card").forEach(card=>{
