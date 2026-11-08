@@ -219,54 +219,39 @@
       .finally(() => clearTimeout(timeoutId));
   }
 
-  /* ---------- contact form ---------- */
+  /* ---------- contact form: honest mail-client handoff ---------- */
   const form = $("#contact-form");
   const formStatus = $("#form-status");
-
   const setFieldState = (input, valid) => {
     const field = input.closest(".form-field");
     field?.classList.toggle("invalid", !valid);
     input.setAttribute("aria-invalid", String(!valid));
     return valid;
   };
-
   const validate = (input) => {
     const value = input.value.trim();
-    if (input.type === "email") {
-      const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-      return setFieldState(input, ok);
-    }
-    return setFieldState(input, value.length > 0);
+    const valid = input.type === "email" ? /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value) : value.length > 0;
+    return setFieldState(input, valid);
   };
-
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
     const fields = $$("input, textarea", form);
-    const allValid = fields.map(validate).every(Boolean);
-
-    if (!allValid) {
-      formStatus.textContent = "Please fill in all required fields correctly.";
+    if (!fields.map(validate).every(Boolean)) {
+      formStatus.textContent = "Please complete all fields with a valid email address.";
       formStatus.className = "form-status error";
       return;
     }
-
     const data = new FormData(form);
-    formStatus.textContent = "Thanks for reaching out! I'll get back to you soon.";
+    const subject = encodeURIComponent("Portfolio contact from " + String(data.get("name")).trim());
+    const body = encodeURIComponent("Name: " + String(data.get("name")).trim() + "\\nEmail: " + String(data.get("email")).trim() + "\\n\\n" + String(data.get("message")).trim());
+    formStatus.textContent = "Your email app will open with the message prepared. Choose your email app to send it.";
     formStatus.className = "form-status success";
-    form.reset();
+    window.location.href = "mailto:?subject=" + subject + "&body=" + body;
   });
-
-  form &&
-    $$("input, textarea", form).forEach((field) => {
-      field.addEventListener("blur", () => {
-        if (field.value.trim() || field.getAttribute("aria-invalid") === "true") {
-          validate(field);
-        }
-      });
-      field.addEventListener("input", () => {
-        if (field.getAttribute("aria-invalid") === "true") validate(field);
-      });
-    });
+  form && $$("input, textarea", form).forEach((field) => {
+    field.addEventListener("blur", () => { if (field.value.trim() || field.getAttribute("aria-invalid") === "true") validate(field); });
+    field.addEventListener("input", () => { if (field.getAttribute("aria-invalid") === "true") validate(field); });
+  });
 
   /* ---------- footer year ---------- */
   const yearEl = $("#year");
