@@ -37,3 +37,19 @@ body{background:radial-gradient(ellipse at 72% 12%,rgba(79,70,229,.13),transpare
 @media(max-width:900px){.hero__visual{min-height:330px}#hero-canvas{inset:-12% -8%;width:116%;height:124%}.terminal{margin:8% auto 0;transform:none}}
 @media(max-width:600px){.hero{min-height:auto;padding-top:7.5rem;padding-bottom:5rem}.hero__visual{min-height:270px;margin-top:1rem}.terminal{margin-top:5%;width:94%}.hero::before{width:90vw;top:36%;right:-28%}.cursor-glow{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}#hero-canvas,.cursor-glow{display:none}}
+
+
+/* Final interaction polish */
+.site-header.is-scrolled{box-shadow:0 12px 40px rgba(0,0,0,.22)}
+.nav-link{position:relative}
+.nav-link.active{color:#a5b4fc}
+.nav-link.active::after{transform:scaleX(1)}
+.hero__scroll span{box-shadow:0 0 16px rgba(34,211,238,.65)}
+.project-card{transition:border-color .35s ease,box-shadow .35s ease,background .35s ease}
+.project-card__status{font:600 .72rem/1.2 var(--font-mono,monospace);color:#67e8f9;border:1px solid rgba(34,211,238,.25);border-radius:999px;padding:.45rem .65rem;background:rgba(8,145,178,.09)}
+.project-card__links{display:flex;flex-wrap:wrap;gap:.7rem}
+.project-card__links a{font-size:.78rem}
+.contact-form h3{margin:0 0 .65rem}
+.contact-form>p{color:var(--text-muted);margin-bottom:1.4rem;line-height:1.7}
+@media(max-width:700px){.project-card{transform:none!important}.project-card__links{gap:.45rem}}
+@media(prefers-reduced-motion:reduce){.hero::before{animation:none}.project-card,.btn{will-change:auto}}
