@@ -1,49 +1,10 @@
 /* ============================================================
    Vipin Prajapati — Portfolio Styles
-   Design system: dark-first, emerald/cyan accent, glassmorphism
+   Design system: light-only, indigo/cyan accent, glassmorphism
    ============================================================ */
 
 /* ---------- Design tokens ---------- */
 :root {
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
-  --font-heading: "Sora", var(--font-body);
-  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
-
-  --bg: #0a0e17;
-  --bg-alt: #0d1320;
-  --surface: rgba(255, 255, 255, 0.035);
-  --surface-solid: #101828;
-  --surface-hover: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.09);
-  --border-strong: rgba(255, 255, 255, 0.16);
-
-  --text: #e6edf3;
-  --text-muted: #9aa7bd;
-  --text-faint: #6b7688;
-
-  --accent: #34d399;
-  --accent-2: #22d3ee;
-  --accent-3: #a78bfa;
-  --accent-soft: rgba(52, 211, 153, 0.12);
-  --accent-2-soft: rgba(34, 211, 238, 0.12);
-  --gradient: linear-gradient(120deg, var(--accent), var(--accent-2));
-  --gradient-bright: linear-gradient(120deg, #34d399, #22d3ee, #a78bfa);
-
-  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 40px rgba(52, 211, 153, 0.18);
-
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 22px;
-
-  --header-h: 70px;
-  --container: 1140px;
-
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-[data-theme="light"] {
   --bg: #f5f7fb;
   --bg-alt: #eef1f8;
   --surface: rgba(255, 255, 255, 0.7);
@@ -66,6 +27,8 @@
   --shadow-md: 0 12px 32px rgba(20, 40, 80, 0.12);
   --shadow-glow: 0 0 40px rgba(5, 150, 105, 0.15);
 }
+
+
 
 /* ---------- Reset / base ---------- */
 *,
@@ -350,16 +313,7 @@ ol {
   gap: 10px;
 }
 
-.theme-toggle {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  transition: background-color 0.25s var(--ease), transform 0.25s var(--ease);
-}
+
 .theme-toggle:hover {
   transform: rotate(12deg) scale(1.05);
   background: var(--surface-hover);
@@ -376,18 +330,10 @@ ol {
 .icon--sun {
   display: none;
 }
-[data-theme="dark"] .icon--moon {
-  display: block;
-}
-[data-theme="dark"] .icon--sun {
-  display: none;
-}
-[data-theme="light"] .icon--sun {
-  display: block;
-}
-[data-theme="light"] .icon--moon {
-  display: none;
-}
+
+
+
+
 
 .nav-toggle {
   display: none;
