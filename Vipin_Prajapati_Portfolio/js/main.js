@@ -7,37 +7,6 @@
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- theme toggle ---------- */
-  const themeToggle = $("#theme-toggle");
-  const root = document.documentElement;
-
-  const getSavedTheme = () => {
-    try {
-      return localStorage.getItem("vp-theme");
-    } catch {
-      return null;
-    }
-  };
-
-  const setTheme = (theme) => {
-    root.setAttribute("data-theme", theme);
-    try {
-      localStorage.setItem("vp-theme", theme);
-    } catch {
-      /* ignore */
-    }
-  };
-
-  const savedTheme = getSavedTheme();
-  if (savedTheme) {
-    setTheme(savedTheme);
-  }
-
-  themeToggle?.addEventListener("click", () => {
-    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    setTheme(next);
-  });
-
   /* ---------- sticky header ---------- */
   const header = $("#site-header");
   const onScroll = () => {
