@@ -30,8 +30,6 @@ body{background:radial-gradient(ellipse at 72% 12%,rgba(79,70,229,.13),transpare
 .timeline::before{background:linear-gradient(#818cf8,#22d3ee,rgba(34,211,238,.05))}
 .timeline__marker{box-shadow:0 0 0 5px rgba(99,102,241,.12),0 0 22px rgba(34,211,238,.4)}
 .site-footer{background:#040611;border-top:1px solid rgba(129,140,248,.14)}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.25,1)}
-.reveal.is-visible{opacity:1;transform:translateY(0)}
 .scroll-progress{position:fixed;inset:0 auto auto 0;height:2px;width:0;z-index:1001;background:linear-gradient(90deg,#6366f1,#22d3ee);box-shadow:0 0 14px #6366f1;pointer-events:none}
 .cursor-glow{position:fixed;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(99,102,241,.10),rgba(34,211,238,.035) 42%,transparent 70%);transform:translate(-50%,-50%);opacity:0;transition:opacity .25s}
 @keyframes orbit-breathe{from{transform:scale(.92) rotate(-12deg);opacity:.45}to{transform:scale(1.06) rotate(12deg);opacity:.9}}
