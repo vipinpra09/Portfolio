@@ -461,6 +461,24 @@ ol {
   gap: clamp(36px, 6vw, 72px);
 }
 
+.hero__identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.hero__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(230, 180, 81, 0.65);
+  box-shadow: 0 0 0 4px rgba(230, 180, 81, 0.12), 0 10px 30px rgba(2, 6, 18, 0.5);
+}
+.hero__identity .hero__eyebrow {
+  margin-bottom: 0;
+}
+
 .hero__eyebrow {
   display: inline-flex;
   align-items: center;
@@ -671,6 +689,48 @@ ol {
   color: var(--text-muted);
   margin-bottom: 18px;
   font-size: 1.04rem;
+}
+
+.about__side {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.about__photo {
+  margin: 0;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.about__photo:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+}
+.about__photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  border: 3px solid rgba(230, 180, 81, 0.6);
+  box-shadow: 0 0 0 6px rgba(230, 180, 81, 0.1), 0 16px 40px rgba(2, 6, 18, 0.45);
+}
+.about__photo figcaption strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+.about__photo figcaption span {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
 .about__stats {
