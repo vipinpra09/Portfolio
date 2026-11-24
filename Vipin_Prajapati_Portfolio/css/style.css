@@ -785,11 +785,95 @@ ol {
 }
 
 /* ---------- Skills ---------- */
+.skills__groups,
 .skills__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
+.skill-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+.skill-group:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+.skill-group--concepts {
+  grid-column: 1 / -1;
+}
+.skill-group__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.skill-group h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.skill-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-logos li {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--text);
+  background: var(--surface-solid);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px 6px 7px;
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.skill-logos li:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.skill-logos img {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  background: #fff;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.skill-logos .dot-fallback {
+  width: 20px;
+  height: 20px;
+  margin-inline: 4px;
+  border-radius: 50%;
+  background: var(--gradient);
+  flex-shrink: 0;
+}
+.skill-group--learning .skill-logos li {
+  border-style: dashed;
+  border-color: color-mix(in srgb, var(--accent-2) 45%, transparent);
+  background: var(--accent-2-soft);
+}
+.skill-group--learning .skill-logos li:hover {
+  border-style: solid;
+}
+
+@media (max-width: 860px) {
+  .skills__groups,
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .skill-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1516,9 +1600,6 @@ ol {
   .skills__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .skill-card--span2 {
-    grid-column: span 2;
-  }
   .hero__inner {
     grid-template-columns: 1fr;
   }
@@ -1578,9 +1659,6 @@ ol {
 @media (max-width: 640px) {
   .skills__grid {
     grid-template-columns: 1fr;
-  }
-  .skill-card--span2 {
-    grid-column: span 1;
   }
   .repos {
     grid-template-columns: 1fr;
