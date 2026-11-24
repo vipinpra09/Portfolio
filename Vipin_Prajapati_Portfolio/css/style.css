@@ -269,6 +269,15 @@ ol {
   font-size: 1.05rem;
   letter-spacing: 0.2px;
 }
+.brand__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(230, 180, 81, 0.65);
+  box-shadow: 0 0 0 3px rgba(230, 180, 81, 0.12);
+  flex-shrink: 0;
+}
 .brand__mark {
   font-family: var(--font-mono);
   color: var(--accent);
