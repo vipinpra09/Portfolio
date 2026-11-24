@@ -5,8 +5,25 @@
 
 /* ---------- Design tokens ---------- */
 :root {
+  /* layout */
+  --container: 1180px;
+  --header-h: 72px;
+
+  /* typography */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Sora", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  /* motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* radii */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+
   --bg: #f5f7fb;
-  --bg-alt: #eef1f8;
+  --bg-alt: #0d1730;
   --surface: rgba(255, 255, 255, 0.7);
   --surface-solid: #ffffff;
   --surface-hover: rgba(255, 255, 255, 0.95);
@@ -80,7 +97,7 @@ ol {
 
 ::selection {
   background: var(--accent);
-  color: #07110b;
+  color: #1c1503;
 }
 
 /* Scrollbar */
@@ -91,11 +108,11 @@ ol {
   background: var(--bg-alt);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a3550;
+  background: #2c3a5e;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a4766;
+  background: #3b4d7a;
 }
 
 /* ---------- Utility ---------- */
@@ -111,7 +128,7 @@ ol {
   z-index: 100;
   padding: 10px 16px;
   background: var(--accent);
-  color: #07110b;
+  color: #1c1503;
   border-radius: var(--radius-sm);
   font-weight: 600;
   transition: top 0.3s var(--ease);
@@ -181,12 +198,12 @@ ol {
 
 .btn--primary {
   background: var(--gradient);
-  color: #07110b;
-  box-shadow: 0 6px 18px rgba(52, 211, 153, 0.28);
+  color: #1c1503;
+  box-shadow: 0 6px 18px rgba(230, 180, 81, 0.28);
 }
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(52, 211, 153, 0.4);
+  box-shadow: 0 10px 26px rgba(230, 180, 81, 0.4);
 }
 
 .btn--ghost {
@@ -468,13 +485,13 @@ ol {
 }
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
+    box-shadow: 0 0 0 0 rgba(230, 180, 81, 0.6);
   }
   70% {
-    box-shadow: 0 0 0 9px rgba(52, 211, 153, 0);
+    box-shadow: 0 0 0 9px rgba(230, 180, 81, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+    box-shadow: 0 0 0 0 rgba(230, 180, 81, 0);
   }
 }
 
@@ -554,7 +571,7 @@ ol {
 }
 .terminal:hover {
   transform: perspective(1000px) rotateY(0) rotateX(0);
-  box-shadow: var(--shadow-md), 0 0 60px rgba(52, 211, 153, 0.22);
+  box-shadow: var(--shadow-md), 0 0 60px rgba(230, 180, 81, 0.22);
 }
 .terminal__bar {
   display: flex;
@@ -839,7 +856,7 @@ ol {
 }
 .project-card__folder {
   font-size: 1.7rem;
-  filter: drop-shadow(0 4px 12px rgba(52, 211, 153, 0.35));
+  filter: drop-shadow(0 4px 12px rgba(230, 180, 81, 0.35));
 }
 .project-card__links {
   display: flex;
@@ -1002,7 +1019,7 @@ ol {
 }
 .edu-card__icon {
   font-size: 2.2rem;
-  filter: drop-shadow(0 4px 14px rgba(34, 211, 238, 0.3));
+  filter: drop-shadow(0 4px 14px rgba(230, 180, 81, 0.3));
 }
 .edu-card h3 {
   font-family: var(--font-heading);
@@ -1323,6 +1340,13 @@ ol {
   color: #f87171;
 }
 
+.contact__aside {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 36px);
+  backdrop-filter: blur(6px);
+}
 .contact__aside h3 {
   font-family: var(--font-heading);
   font-size: 1.25rem;

@@ -199,7 +199,7 @@
   };
   const validate = (input) => {
     const value = input.value.trim();
-    const valid = input.type === "email" ? /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value) : value.length > 0;
+    const valid = input.type === "email" ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) : value.length > 0;
     return setFieldState(input, valid);
   };
   form?.addEventListener("submit", (event) => {
@@ -212,7 +212,7 @@
     }
     const data = new FormData(form);
     const subject = encodeURIComponent("Portfolio contact from " + String(data.get("name")).trim());
-    const body = encodeURIComponent("Name: " + String(data.get("name")).trim() + "\\nEmail: " + String(data.get("email")).trim() + "\\n\\n" + String(data.get("message")).trim());
+    const body = encodeURIComponent("Name: " + String(data.get("name")).trim() + "\nEmail: " + String(data.get("email")).trim() + "\n\n" + String(data.get("message")).trim());
     formStatus.textContent = "Your email app will open with the message prepared. Choose your email app to send it.";
     formStatus.className = "form-status success";
     window.location.href = "mailto:?subject=" + subject + "&body=" + body;
