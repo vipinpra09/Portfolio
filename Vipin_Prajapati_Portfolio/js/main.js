@@ -222,6 +222,37 @@
     field.addEventListener("input", () => { if (field.getAttribute("aria-invalid") === "true") validate(field); });
   });
 
+  /* ---------- project category filters ---------- */
+  const filterButtons = $$(".projects__filters .filter-pill");
+  const spotlightCard = $(".project-spotlight");
+  const projectsGrid = $("#projects-grid");
+  const projectCards = $$(".project-card", projectsGrid || document);
+
+  if (filterButtons.length && (spotlightCard || projectCards.length)) {
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter || "all";
+        filterButtons.forEach((b) => {
+          const active = b === btn;
+          b.classList.toggle("is-active", active);
+          b.setAttribute("aria-pressed", String(active));
+        });
+        projectsGrid?.classList.toggle("is-filtered", filter !== "all");
+
+        const toggleCard = (el) => {
+          if (!el) return;
+          const cats = (el.dataset.category || "").split(/\s+/);
+          const show = filter === "all" || cats.includes(filter);
+          el.hidden = !show;
+          if (show) el.classList.add("revealed");
+        };
+
+        toggleCard(spotlightCard);
+        projectCards.forEach(toggleCard);
+      });
+    });
+  }
+
   /* ---------- footer year ---------- */
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
